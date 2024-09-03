@@ -1,0 +1,25 @@
+﻿number,code,forename,surname,dob,nationality,url,current_team
+44,HAM,Lewis,Hamilton,07/01/1985,British,http://en.wikipedia.org/wiki/Lewis_Hamilton,Mercedes
+14,ALO,Fernando,Alonso,29/07/1981,Spanish,http://en.wikipedia.org/wiki/Fernando_Alonso,Aston Martin
+5,VET,Sebastian,Vettel,03/07/1987,German,http://en.wikipedia.org/wiki/Sebastian_Vettel,N/A
+10,GAS,Pierre,Gasly,07/02/1996,French,http://en.wikipedia.org/wiki/Pierre_Gasly,Alpine
+27,HUL,Nico,Hulkenberg,19/08/1987,German,http://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg,Haas
+11,PER,Sergio,Perez,26/01/1990,Mexican,http://en.wikipedia.org/wiki/Sergio_P%C3%A9rez,Red Bull
+3,RIC,Daniel,Ricciardo,01/07/1989,Australian,http://en.wikipedia.org/wiki/Daniel_Ricciardo,Alpha Tauri
+77,BOT,Valtteri,Bottas,28/08/1989,Finnish,http://en.wikipedia.org/wiki/Valtteri_Bottas,Alpha Romeo
+20,MAG,Kevin,Magnussen,05/10/1992,Danish,http://en.wikipedia.org/wiki/Kevin_Magnussen,Haas
+33,VER,Max,Verstappen,30/09/1997,Dutch,http://en.wikipedia.org/wiki/Max_Verstappen,Red Bull
+55,SAI,Carlos,Sainz,01/09/1994,Spanish,http://en.wikipedia.org/wiki/Carlos_Sainz_Jr.,Ferrari
+31,OCO,Esteban,Ocon,17/09/1996,French,http://en.wikipedia.org/wiki/Esteban_Ocon,Alpine
+18,STR,Lance,Stroll,29/10/1998,Canadian,http://en.wikipedia.org/wiki/Lance_Stroll,Aston Martin
+16,LEC,Charles,Leclerc,16/10/1997,Monegasque,http://en.wikipedia.org/wiki/Charles_Leclerc,Ferrari
+4,NOR,Lando,Norris,13/11/1999,British,http://en.wikipedia.org/wiki/Lando_Norris,McLaren
+63,RUS,George,Russell,15/02/1998,British,http://en.wikipedia.org/wiki/George_Russell_(racing_driver),Mercedes
+23,ALB,Alexander,Albon,23/03/1996,Thai,http://en.wikipedia.org/wiki/Alexander_Albon,Williams
+6,LAT,Nicholas,Latifi,29/06/1995,Canadian,http://en.wikipedia.org/wiki/Nicholas_Latifi,N/A
+22,TSU,Yuki,Tsunoda,11/05/2000,Japanese,http://en.wikipedia.org/wiki/Yuki_Tsunoda,Alpha Tauri
+47,MSC,Mick,Schumacher,22/03/1999,German,http://en.wikipedia.org/wiki/Mick_Schumacher,N/A
+24,ZHO,Guanyu,Zhou,30/05/1999,Chinese,http://en.wikipedia.org/wiki/Zhou_Guanyu,Alpha Romeo
+21,DEV,Nyck,de Vries,06/02/1995,Dutch,http://en.wikipedia.org/wiki/Nyck_de_Vries,N/A
+81,PIA,Oscar,Piastri,06/04/2001,Australian,http://en.wikipedia.org/wiki/Oscar_Piastri,McLaren
+2,SAR,Logan,Sargeant,31/12/2000,American,http://en.wikipedia.org/wiki/Logan_Sargeant,Williams

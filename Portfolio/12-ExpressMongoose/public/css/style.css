@@ -1,0 +1,26 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: beige !important;
+}
+
+img {
+    width: 80px;
+}
+
+#num,
+#code {
+    width: 35px;
+}
+
+form input,
+select {
+    border-style: none;
+}
+
+input[type=text]:focus {
+    border: 4px solid #c9b220;
+}

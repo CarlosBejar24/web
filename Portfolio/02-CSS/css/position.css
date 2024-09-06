@@ -1,41 +1,46 @@
 body {
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    align-items: flex-start;
+    position: relative; /* Añadido para permitir el posicionamiento absoluto de los hijos */
 }
 
-section {
+.flag {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Permanece en su lugar */
+}
+
+.horizontal-flag {
+    display: flex;
+    flex-direction: row;
+    position: absolute; /* Permite posicionar la bandera horizontal */
+    left: 200px; /* Mueve la bandera horizontal 200px a la derecha */
+    top: 0; /* Mantiene la bandera horizontal al mismo nivel que la vertical */
+}
+
+.box {
     width: 100px;
     height: 100px;
 }
 
-.yellow {
-    background-color: yellow;
-    margin-left: 0;
-    margin-top: 0;
-}
-
 .blue {
     background-color: blue;
-    margin-left: 100px;
-    margin-top: -100px;
+}
+
+.yellow {
+    background-color: yellow;
 }
 
 .red {
     background-color: red;
-    margin-left: 200px;
-    margin-top: -100px;
+}
+
+.space {
+    width: 50px; /* Ajusta el tamaño del espacio a tu gusto */
 }

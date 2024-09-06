@@ -2,12 +2,28 @@ body {
     display: flex;
     height: 100vh;
     margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flag {
+    display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.horizontal-flag {
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .box {
-    flex: 1;
-    height: 33.33%;
+    width: 100px;
+    height: 100px;
 }
 
 .blue {
@@ -20,4 +36,8 @@ body {
 
 .red {
     background-color: red;
+}
+
+.space {
+    width: 50px; /* Ajusta el tamaño del espacio a tu gusto */
 }

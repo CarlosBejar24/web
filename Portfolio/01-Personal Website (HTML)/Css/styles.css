@@ -1,0 +1,51 @@
+img{
+    width: 150px;
+    border: solid;
+}
+
+li{
+    text-decoration: underline;
+}
+
+.flag{
+    border: none;
+    width: 100px;
+}
+
+.mex{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+#playa_carmen{
+    border-top: 6px dotted red;
+}
+
+#top5 li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bot3 li{
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h2:hover{
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+thead{
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: goldenrod;
+}
+
+/*li:nth-child(3){
+    background-color:aqua ;
+}*/

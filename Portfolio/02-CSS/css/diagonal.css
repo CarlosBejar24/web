@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 div {
     width: 200px;
     height: 200px;
@@ -28,8 +27,3 @@ div {
     top: 500px; /* 260 + 200 + 20 + 20*/
     left: 500px; /* 260 + 200 + 20 + 20*/
 }
-=======
-body {
-    margin: 0;
-}
->>>>>>> 40ab8a6d75e67cf6f13fa71a8b0df633a65ccc71

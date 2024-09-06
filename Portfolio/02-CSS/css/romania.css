@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
     display: flex;
     height: 100vh;
     margin: 0;
@@ -22,7 +21,3 @@ body {
 .red {
     background-color: red;
 }
-=======
-    margin: 0;
-}
->>>>>>> 40ab8a6d75e67cf6f13fa71a8b0df633a65ccc71

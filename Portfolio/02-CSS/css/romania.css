@@ -1,3 +1,23 @@
 body {
+    display: flex;
+    height: 100vh;
     margin: 0;
+    flex-direction: column;
+}
+
+.box {
+    flex: 1;
+    height: 33.33%;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
 }

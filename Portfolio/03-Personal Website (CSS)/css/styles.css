@@ -1,3 +1,85 @@
+/* General Styles */
 body {
-  background-color: #f0f0f0; /* Cambia este valor al color que desees */
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  background-color: #f4f4f4; /* Example background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 5.5rem;
+  color: #333; /* Choose a color that contrasts well with the background */
+  margin: 50px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #004d99; /* Secondary color */
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ff6600; /* Third color */
+}
+
+/* HR Styles */
+hr {
+  border: 0;
+  border-top: 6px dotted #EAF6F6;
+  width: 4%;
+  margin: 100px auto;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0056b3; /* Default color */
+}
+
+a:hover {
+  color: green;
+}
+
+/* Image Styles */
+img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+/* Section Styles */
+div.section {
+  padding: 20px;
+}
+
+div.section:nth-of-type(even) {
+  background-color: #e0e0e0; /* Alternate background color */
+}
+
+/* Team Section (if added) */
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  border: 2px dotted #000; /* Dotted border */
+  background-color: #fff; /* Background color */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
 }

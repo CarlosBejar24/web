@@ -7,6 +7,7 @@ body {
   padding: 0;
 }
 
+
 /* Header Styles */
 h1 {
   font-family: 'Sacramento';
@@ -48,8 +49,8 @@ a:hover {
 
 /* Image Styles */
 img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 1000px;
+  max-height: 400px;
   border-radius: 50%;
 }
 
@@ -91,5 +92,26 @@ div.section:nth-of-type(even) {
 
 .bg-gray{
   background: #807474
+}
+
+ol {
+  list-style-type: none; /* Elimina los números de la lista */
+  padding: 0; /* Elimina el padding */
+}
+
+li {
+  margin-bottom: 15px; /* Espacio entre elementos de la lista */
+}
+
+span {
+  display: flex; /* Usar flex para alinear el texto y el porcentaje */
+  justify-content: space-between; /* Espacio entre el texto y el porcentaje */
+  align-items: center; /* Alinear verticalmente */
+  font-weight: bold; /* Hacer el texto más visible */
+}
+
+.progress-bar {
+  height: 20px; /* Altura de la barra de progreso */
+  margin-top: 5px; /* Espacio entre el texto y la barra */
 }
 

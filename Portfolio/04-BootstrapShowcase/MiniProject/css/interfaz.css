@@ -1,19 +1,57 @@
-body{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Estilos para la barra lateral */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+    top: 56px; /* Altura de la navbar */
+    left: 0;
+    overflow-y: auto;
+}
+
+#sidebar.collapsed {
+    margin-left: -250px;
+}
+
+#sidebar .nav-link {
+    color: #fff;
+}
+
+#sidebar .nav-link:hover {
+    background: #495057;
+}
+
+/* Ajustar el contenido principal */
+#content {
+    margin-left: 250px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+#content.expanded {
+    margin-left: 0;
+}
+
+/* Asegurar que el contenido no quede oculto detrás del footer */
+body {
     padding-bottom: 60px; /* Altura del footer */
 }
 
-.centrado {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.bg-white{
-    background: #ffff
-}
-
-.bg-gray{
-    background: #807474
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+    #content {
+        margin-left: 0;
+    }
+    #content.expanded {
+        margin-left: 250px;
+    }
 }

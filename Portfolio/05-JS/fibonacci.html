@@ -14,12 +14,19 @@
     <hr />
     <p>Introduce the fibonacci number you want to get the value of</p>
     <div>
-        <input type="text" id="num" />
-        <button id="btn"> Calculate</button>
+        <input type="number" id="num" />
+        <button id="btn" onclick="calculateFibonacci()">Calculate</button>
         <br />
         <span id="fibonacciLbl"></span>
     </div>
 
+    <script type="text/javascript">
+        function calculateFibonacci() {
+            var result = fibonacci(); // Llama a la función fibonacci() que toma el valor del input
+            document.getElementById("fibonacciLbl").textContent = "Fibonacci value: " + result; // Muestra el resultado en el span
+        }
+    </script>
+    
 </body>
 
 </html>

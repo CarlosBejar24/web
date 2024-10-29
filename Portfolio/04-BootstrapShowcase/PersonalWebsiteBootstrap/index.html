@@ -227,91 +227,74 @@
         </div>
     </section>
 
-    <!-- Interactive Elements Section -->
+
+
     <section class="bg-light py-5">
         <div class="container">
-            <h2>Interactive Elements</h2>
-            <div class="mb-4">
-                <!-- Tooltip Implementado -->
-                <button type="button" class="btn btn-secondary me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip en la parte superior">
-                  Hover para Tooltip
-                </button>
-
-                <!-- Popover Implementado -->
-                <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Título del Popover" data-bs-content="Contenido del Popover">
-                  Click para Popover
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spinner Section -->
-    <section class="py-5">
-        <div class="container text-center">
-            <h2>Loading Example</h2>
-            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-              <span class="visually-hidden">Cargando...</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <!-- Botón para abrir el Modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-              Abrir Formulario de Contacto
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Formulario de Contacto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Etiquetas Flotantes Implementadas -->
-                    <form>
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="Nombre" required>
-                        <label for="floatingName">Nombre</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="Correo electrónico" required>
-                        <label for="floatingEmail">Correo electrónico</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingMessage" style="height: 100px" required></textarea>
-                        <label for="floatingMessage">Mensaje</label>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-                  </div>
+            <div class="row">
+                <!-- Contact Section -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
+                    <h2>Contact Me</h2>
+                    <!-- Botón para abrir el Modal -->
+                    <button type="button" class="btn btn-primary" onclick="showContactModal()">
+                        Abrir Formulario de Contacto
+                    </button>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="contactModalLabel">Formulario de Contacto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Spinner de carga dentro del modal -->
+                                    <div id="spinner" class="text-center">
+                                        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                                            <span class="visually-hidden">Cargando...</span>
+                                        </div>
+                                    </div>
+                                    <!-- Formulario oculto hasta que se cargue -->
+                                    <form id="contactForm" style="display: none;">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingName" placeholder="Nombre" required>
+                                            <label for="floatingName">Nombre</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Correo electrónico" required>
+                                            <label for="floatingEmail">Correo electrónico</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingMessage" style="height: 100px" required></textarea>
+                                            <label for="floatingMessage">Mensaje</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+    
+                <!-- Social Links Section -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center mb-4">
+                    <h2>Social Links</h2>
+                    <a href="https://github.com/" class="btn btn-outline-dark me-2" target="_blank" data-bs-toggle="tooltip" title="Para ir a mi repo">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/" class="btn btn-outline-primary me-2" target="_blank" data-bs-toggle="tooltip" title="Chamba">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:0262149@up.edu.mx" class="btn btn-outline-danger" data-bs-toggle="tooltip" title="Mandame mensaje">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Social Links Section -->
-    <section class="py-5">
-        <div class="container text-center">
-            <h2>Social Links</h2>
-            <a href="https://github.com/" class="btn btn-outline-dark me-2" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/" class="btn btn-outline-primary me-2" target="_blank">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="mailto:0262149@up.edu.mx" class="btn btn-outline-danger">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-        </div>
-    </section>
-
+    
+    
     <!-- Footer -->
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 Carlos Béjar</p>
@@ -322,6 +305,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Inicialización de Tooltips y Popovers -->
     <script>
+         // Función para mostrar el modal con spinner
+    function showContactModal() {
+        const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+        document.getElementById('spinner').style.display = 'block';
+        document.getElementById('contactForm').style.display = 'none';
+        contactModal.show();
+
+        setTimeout(() => {
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('contactForm').style.display = 'block';
+        }, 500);
+    }
+
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)

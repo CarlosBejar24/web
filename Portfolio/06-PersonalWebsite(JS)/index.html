@@ -1,12 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Bejar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  
+    <!-- Navbar ya implementada -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Carlos Béjar </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="destinations.html">Destinations</a>
+              <a class="nav-link" href="#">CV</a>
+              <a class="nav-link disabled">Disabled</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="./Images/carlosKennito.jpg" alt="Carlos Bejar" class="rounded-circle custom imagen-responsive">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Carlos Bejar</h1>
+                    <p class="lead">Full-time Systems Engineering student at Universidad Panamericana</p>
+                    <p>Los Robles 297</p>
+                    <!-- Botones Implementados -->
+                    <div class="my-3">
+                        <button type="button" class="btn btn-primary me-2">Primary</button>
+                        <button type="button" class="btn btn-secondary me-2">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                    </div>
+                    <!-- Grupo de Botones Implementado -->
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-outline-primary">Left</button>
+                      <button type="button" class="btn btn-outline-primary">Middle</button>
+                      <button type="button" class="btn btn-outline-primary">Right</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>"I want to be known as someone who is passionate about music, particularly the piano and guitar, and who has a deep love for technology and systems. Family is a cornerstone in my life, and I find fulfillment in helping others, whether through my technical skills or simply being there when needed. My goal is to combine creativity and logic to solve problems while staying connected to the people I care about."</p>
+            <hr>
+            <blockquote class="blockquote">
+                "El camino al éxito está pavimentado de fracasos." — Chava Iglesias, Club de Cuervos
+            </blockquote>
+            <hr>
+            <p>
+                <a href="destinations.html" class="btn btn-outline-primary" target="_blank">Destinations</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Background Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2>Background</h2>
+            <p>I am currently studying at the <i>Universidad Panamericana</i>, working towards a degree in Systems Engineering and Computer Graphics. My education combines technical skills in programming, software development, and systems analysis with creative fields like digital design and computer graphics. This blend is preparing me for a versatile career in technology, where I can innovate and adapt to the evolving landscape of the digital world.</p>
+        </div>
+    </section>
+
+<!-- Education Section --> 
+<section class="py-5">
+    <div class="container">
+        <h3>Education</h3>
+        <div class="row">
+            <!-- Primer lugar de educación -->
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                <strong>2007-2010</strong> 
+                <a href="https://jardinteresadecalcuta.edu.mx/" target="_blank">Teresa de Calcuta</a>
+                <div class="mt-2">
+                    <img src="./Images/teresa.png" alt="Logo Teresa de Calcuta" class="img-fluid" style="max-width: 150px;">
+                </div>
+            </div>
+            <!-- Segundo lugar de educación -->
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                <strong>2010-2023</strong> 
+                <a href="https://www.imaoccidente.edu.mx/" target="_blank">Instituto Miguel Angel de Occidente</a>
+                <div class="mt-2">
+                    <img src="./Images/imao.png" alt="Logo Instituto Miguel Angel de Occidente" class="img-fluid" style="max-width: 150px;">
+                </div>
+            </div>
+            <!-- Tercer lugar de educación -->
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                <strong>2023...</strong> 
+                <a href="https://www.up.edu.mx/campus-guadalajara/" target="_blank">Universidad Panamericana</a>
+                <div class="mt-2">
+                    <img src="./Images/up.jpg" alt="Logo Universidad Panamericana" class="img-fluid" style="max-width: 150px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Skills Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h3>Skills</h3>
+        <!-- Tarjeta (Card) Implementada -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Habilidades Técnicas</h5>
+                <p class="card-text">Una combinación de habilidades técnicas y creativas para desarrollar soluciones innovadoras.</p>
+                <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+        </div>
+        
+        <!-- Barra de Progreso Implementada -->
+        <ol>
+            <li>
+                <span>Problem solving <b>40%</b></span>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+            </li>
+            <li>
+                <span>Programming <b>38%</b></span>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 38%;" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">38%</div>
+            </li>
+            <li>
+                <span>Leadership <b>60%</b></span>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+            </li>
+            <li>
+                <span>Piano <b>60%</b></span>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+            </li>
+            <li>
+                <span>Fortnite pro player <b>80%</b></span>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+    <!-- Hobbies Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2>Hobbies</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Favorite Food</h3>
+                    <p><strong>Top 5</strong></p>
+                    <ol>
+                        <li>Mexican</li>
+                        <li>Italian</li>
+                        <li>French</li>
+                        <li>Arab</li>
+                        <li>Sports</li>
+                    </ol>
+                    <p><strong>Bottom 3</strong></p>
+                    <ol start="1">
+                        <li>Russian</li>
+                        <li>Peruvian</li>
+                        <li>Caribbean</li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <h3>Books, Movies & TV Shows</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Title 1</th>
+                                <th>Image 1</th>
+                                <th>Title 2</th>
+                                <th>Image 2</th>
+                                <th>Title 3</th>
+                                <th>Image 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Books</td>
+                                <td>El principito</td>
+                                <td><img src="./Images/principito.png" alt="El principito" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>Diario de Greg</td>
+                                <td><img src="./Images/grag.jpg" alt="Diario de Greg" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>Momo</td>
+                                <td><img src="./Images/momo.jpeg" alt="Momo" class="img-fluid" style="max-width: 50px;"></td>
+                            </tr>
+                            <tr>
+                                <td>Movies</td>
+                                <td>Harry Potter</td>
+                                <td><img src="./Images/harry.jpg" alt="Harry Potter" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>Scent of a Woman</td>
+                                <td><img src="./Images/scent.jpg" alt="Scent of a Woman" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>Duro de matar</td>
+                                <td><img src="./Images/matar.jpg" alt="Duro de matar" class="img-fluid" style="max-width: 50px;"></td>
+                            </tr>
+                            <tr>
+                                <td>TV Shows</td>
+                                <td>Breaking Bad</td>
+                                <td><img src="./Images/bad.jpg" alt="Breaking Bad" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>Suits</td>
+                                <td><img src="./Images/suits.jpg" alt="Suits" class="img-fluid" style="max-width: 50px;"></td>
+                                <td>El Chavo del 8</td>
+                                <td><img src="./Images/chavo.jpg" alt="El Chavo del 8" class="img-fluid" style="max-width: 50px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 style="color: #0056b3;">Agenda</h2>
+
+    <form id="activityForm">
+        <fieldset>
+            <legend>Agregar Actividad</legend>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="start">Time Start:</label>
+            <input type="time" id="start" name="start">
+            <br><br>
+
+            <label for="end">Time End:</label>
+            <input type="time" id="end" name="end">
+            <br><br>
+
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity">
+            <br><br>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place">
+            <br><br>
+
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="school">School</option>
+                <option value="personal">Personal</option>
+                <option value="professional">Professional</option>
+                <option value="family">Family</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+            <br><br>
+
+            <label for="flag">Flag:</label>
+            <input type="color" id="flag" name="flag">
+            <br><br>
+
+            <label for="freebusy">Free/Busy:</label>
+            <input type="checkbox" id="freebusy" name="freebusy">
+            <label for="freebusy">Busy</label>
+            <br><br>
+
+            <button type="button" onclick="addActivity()">Add</button>
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <h2 style="color: #0056b3;">Weekly Schedule</h2>
+    <table id="scheduleTable" border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time Start</th>
+                <th>Time End</th>
+                <th>Activity</th>
+                <th>Place</th>
+                <th>Type</th>
+                <th>Notes</th>
+                <th>Flag</th>
+                <th>Free/Busy</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Section -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
+                    <h2>Contact Me</h2>
+                    <!-- Botón para abrir el Modal -->
+                    <button type="button" class="btn btn-primary" onclick="showContactModal()">
+                        Abrir Formulario de Contacto
+                    </button>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="contactModalLabel">Formulario de Contacto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Spinner de carga dentro del modal -->
+                                    <div id="spinner" class="text-center">
+                                        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                                            <span class="visually-hidden">Cargando...</span>
+                                        </div>
+                                    </div>
+                                    <!-- Formulario oculto hasta que se cargue -->
+                                    <form id="contactForm" style="display: none;">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingName" placeholder="Nombre" required>
+                                            <label for="floatingName">Nombre</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Correo electrónico" required>
+                                            <label for="floatingEmail">Correo electrónico</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingMessage" style="height: 100px" required></textarea>
+                                            <label for="floatingMessage">Mensaje</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Social Links Section -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center mb-4">
+                    <h2>Social Links</h2>
+                    <a href="https://github.com/" class="btn btn-outline-dark me-2" target="_blank" data-bs-toggle="tooltip" title="Para ir a mi repo">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/" class="btn btn-outline-primary me-2" target="_blank" data-bs-toggle="tooltip" title="Chamba">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:0262149@up.edu.mx" class="btn btn-outline-danger" data-bs-toggle="tooltip" title="Mandame mensaje">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Carlos Béjar</p>
+        <p>Contact: <a href="mailto:0262149@up.edu.mx">0262149@up.edu.mx</a></p>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/server.js" ></script>
+    <!-- Inicialización de Tooltips y Popovers -->
 </body>
 </html>

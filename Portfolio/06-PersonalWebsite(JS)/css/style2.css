@@ -1,0 +1,27 @@
+body{
+    background: #3D7EAA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFE47A, #3D7EAA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    background-color: #f4f4f4; /* Example background color */
+    margin: 0;
+    padding: 0;
+    }
+
+h1 {
+    font-family: 'Sacramento';
+    font-size: 5.5rem;
+    color: #333; /* Choose a color that contrasts well with the background */
+    margin: 50px;
+    }
+
+.accordion-body img {
+    border-radius: 8px;
+    }
+    
+.accordion-body h2 {
+    margin-top: 0;
+    }
+
+    

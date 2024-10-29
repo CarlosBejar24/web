@@ -1,44 +1,37 @@
 /*
-    Sieve of Eratosthenes - The sieve of Eratosthenes is one of the most efficient ways
-    to find all of the smaller primes (below 10 million or so).
+    Sieve of Eratosthenes - Finds all prime numbers up to a given limit `n`.
 */
 
-var sieve = function (n) {
-  "use strict";
+function sieve(n) {
+  var array = new Array(n + 1).fill(true); // Array to mark non-prime numbers
+  var primes = [];
 
-  var array = [], // Array para marcar números como no primos
-    primes = [], // Array para almacenar los números primos
-    i,
-    j;
+  array[0] = array[1] = false; // 0 and 1 are not prime numbers
 
-  // Inicializa el array con `true`, asumiendo que todos los números son primos
-  for (i = 2; i <= n; i++) {
-    array[i] = true;
-  }
-
-  // Implementación del Criba de Eratóstenes
-  for (i = 2; i <= Math.sqrt(n); i++) {
+  for (var i = 2; i <= Math.sqrt(n); i++) {
     if (array[i]) {
-      // Marca como no primos los múltiplos de `i`
-      for (j = i * i; j <= n; j += i) {
+      for (var j = i * i; j <= n; j += i) {
         array[j] = false;
       }
     }
   }
 
-  // Todos los números que quedaron como `true` son primos
-  for (i = 2; i <= n; i++) {
+  for (var i = 2; i <= n; i++) {
     if (array[i]) {
       primes.push(i);
     }
   }
 
   return primes;
-};
+}
 
-// Función para mostrar los primos en el HTML
+// Function to display primes in the HTML
 function displayPrimes() {
-  var num = document.getElementById("num").value;
+  var num = parseInt(document.getElementById("num").value);
+  if (isNaN(num) || num < 2) {
+    document.getElementById("primes").textContent = "Please enter a number greater than 1.";
+    return;
+  }
   var primes = sieve(num);
   document.getElementById("primes").textContent = primes.join(", ");
 }

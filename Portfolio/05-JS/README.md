@@ -60,7 +60,7 @@ Look for the algorithm and implement it.
 
 ---
 
-## Society parody - 3 pts
+## Society parody - 3 pts 
 
 This is a game that will show you how happiness/sadness affects the surronding people. In this game you start with a society with initial happy/sad parameters given by the individuals that are there. They will interact with each other and their happy factors will change, depending on which character contacts who. When the happyness values go below 0, then the subject will turn sad, but if the happyness values goes above 1, they will become happy people.
 

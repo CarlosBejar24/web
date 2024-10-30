@@ -1,0 +1,18 @@
+{
+  "name": "08-basicexpress",
+  "version": "1.0.0",
+  "description": "This exercise should show how we can serve multiple static pages and basic interaction via form parameters",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "08-basicexpress": "file:",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}

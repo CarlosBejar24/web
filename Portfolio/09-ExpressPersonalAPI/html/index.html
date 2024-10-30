@@ -13,13 +13,18 @@
         <h3>
             <%= error %>
         </h3>
-        <% } %>
+        <% } else{%>
             <form action="/greet" method="get">
                 Register:
                 <input type="text" name="name" id="name" placeholder="Name">
                 <input type="submit" value="go next">
             </form>
 
+            <% if(nombre){ %>
+                <h3>Hola <%= nombre %>!!!!</h3>
+            <%}%>
+
+        <%}%>
 </body>
 
 </html>

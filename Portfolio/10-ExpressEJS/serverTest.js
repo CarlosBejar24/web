@@ -9,7 +9,7 @@ const path = require('path');
 
 
 // TODO: configure the express server
-    //hacerlo static
+    //carpeta publica
     app.use(express.static("public"));
     //Ejs templates
     app.engine("ejs", require("ejs").renderFile);
@@ -26,19 +26,27 @@ let posts = [];
 let name;
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+  res.render("test");
 });
 
 // Endpoint para la versión insegura (GET)
 app.get('/login', (req, res) => {
   const userName = req.query.name;
-  res.send(`Hello, ${userName}! This message arrived unsecured via GET.`);
+  var params = {
+    userName,
+    method: "GET",
+  };
+  res.render("test", params);
 });
 
 // Endpoint para la versión segura (POST)
 app.post('/login', (req, res) => {
-  const userName = req.body.name;
-  res.send(`Hello, ${userName}! This message arrived securely via POST.`);
+    const userName = req.body.name;
+    var params = {
+      userName,
+      method: "POST",
+    };
+    res.render("hi", params);
 });
 
 app.listen(3000, (err) => {

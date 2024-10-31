@@ -30,7 +30,7 @@ This exercise will ilustrate how do we use EJS to create dynamic content using E
 ### Templates
 
 - Create a partial that will represent the **header** of all the files of our app, and a partial that will represent the **footer** section of the same files.
-  - Use the _index.html_ file as a base of the L&F
+- Use the _index.html_ file as a base of the L&F
 - By creating the _test.ejs_ template, now allow the system to greet the user with a more sophisticated message via an html page
 
 **Important**: Make sure you will not loose the name of the user logged in.

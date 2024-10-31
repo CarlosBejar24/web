@@ -1,75 +1,58 @@
-const express = require("express");
-const https = require("https");
-const bodyParser = require("body-parser");
-const axios = require("axios");
-const FormData = require("form-data");
+require('dotenv').config(); // Cargar variables del archivo .env
 
+const express = require('express');
+const https = require('https');
 const app = express();
+const port = 3000;
 
-// https get
+const apiKey = process.env.API_KEY; // Clave de API desde el archivo .env
+console.log(apiKey);
+
+// Configuración para procesar datos enviados desde el formulario
+app.use(express.urlencoded({ extended: true }));
+
+// Configuración para servir archivos estáticos
+app.use(express.static("sample"));
+
+// Ruta principal para mostrar el formulario
 app.get("/", (req, res) => {
-  var url = "http://placekitten.com/g/300/300";
-  https.get(url, (response) => {
-    console.log(response.statusCode);
-    response.on("data", (data) => {
-      res.write(data);
-      res.send();
-    });
-  });
+    res.sendFile(__dirname + "/sample/index.html");
 });
 
-// https post
-app.get("/dictionary", (req, res) => {
-  var url = "https://api.toys/api/check_dictionary";
-  const form_data = new FormData();
-  form_data.append("text", "marry");
-  const options = {
-    method: "POST",
-    headers: form_data.getHeaders(),
-  };
-  var soapRequest = https.request(url, options, (response) => {
-    if (response.statusCode === 200) {
-      response
-        .on("data", (data) => {
-          var jsonResp = JSON.parse(data);
-          console.log(jsonResp);
-          res.send("Success");
-        })
-        .on("error", (e) => {
-          res.send("Error ${e.message}");
-        });
-    } else {
-      res.send("Error");
-    }
-  });
-  form_data.pipe(soapRequest);
-});
+// Ruta para manejar la solicitud del formulario
+app.post("/", (req, res) => {
+    const city = req.body.cityName; // Ciudad ingresada en el formulario
+    const units = "metric"; // Para obtener la temperatura en Celsius
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-// axios post
-app.get("/temp", (req, res) => {
-  var url = "https://api.toys/api/check_dictionary";
-  const form_data = new FormData();
-  form_data.append("text", "marry");
-  axios
-    .post(url, form_data, { headers: form_data.getHeaders() })
-    .then((response) => {
-      var data = response.data;
-      console.log(data);
-      if (!data.hasOwnProperty("error")) {
-        console.log("no error");
-        res.send("Success");
-      } else {
-        console.log("Fail");
-        res.send("Fail");
-      }
-    })
-    .catch((err) => {
-      console.log(err.code + ": " + err.message);
-      console.log(err.stack);
-      res.send("Fail error");
+    // Hacemos la solicitud a la API
+    https.get(url, (response) => {
+        if (response.statusCode === 200) {
+            response.on("data", (data) => {
+                const weatherData = JSON.parse(data);
+                const temp = weatherData.main.temp;
+                const description = weatherData.weather[0].description;
+                const icon = weatherData.weather[0].icon;
+                const imageURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+                // Construimos la respuesta HTML para el usuario
+                res.write(`<h1>The temperature in ${city} is ${temp}°C</h1>`);
+                res.write(`<p>The weather is currently ${description}</p>`);
+                res.write(`<img src="${imageURL}" alt="weather icon">`);
+                res.write('<br><a href="/">Go back</a>');
+                res.send();
+            });
+        } else {
+            res.write(`<p>Error: Unable to find weather for ${city}</p>`);
+            res.write('<br><a href="/">Go back</a>');
+            res.send();
+        }
+    }).on("error", (e) => {
+        res.send("Error connecting to the API: " + e.message);
     });
 });
 
-app.listen(3000, () => {
-  console.log("Listening to port 3000");
+// Inicia el servidor
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });

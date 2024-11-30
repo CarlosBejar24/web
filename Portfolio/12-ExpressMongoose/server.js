@@ -1,62 +1,76 @@
-const express = require("express");
+
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path');
+const bodyParser = require('body-parser');
+
 const app = express();
-const mongoose = require("mongoose");
+const PORT = 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
-app.engine("ejs", require("ejs").renderFile);
-app.set("view engine", "ejs");
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
 
-const mongoUrl = "mongodb://127.0.0.1:27017/f1";
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Definition of a schema
-const teamSchema = new mongoose.Schema({
-  id: Number,
-  name: String,
-  nationality: String,
-  url: String,
-});
-teamSchema.set("strictQuery", true);
-
+// MongoDB Schema
 const driverSchema = new mongoose.Schema({
-  num: Number,
-  code: String,
-  forename: String,
-  surname: String,
-  dob: Date,
-  nationality: String,
-  url: String,
-  team: teamSchema,
-});
-driverSchema.set("strictQuery", true);
-
-const Team = mongoose.model("Team", teamSchema);
-const Driver = mongoose.model("Driver", driverSchema);
-
-let countries = [
-  { code: "ENG", label: "England" },
-  { code: "SPA", label: "Spain" },
-  { code: "GER", label: "Germany" },
-  { code: "FRA", label: "France" },
-  { code: "MEX", label: "Mexico" },
-  { code: "AUS", label: "Australia" },
-  { code: "FIN", label: "Finland" },
-  { code: "NET", label: "Netherlands" },
-  { code: "CAN", label: "Canada" },
-  { code: "MON", label: "Monaco" },
-  { code: "THA", label: "Thailand" },
-  { code: "JAP", label: "Japan" },
-  { code: "CHI", label: "China" },
-  { code: "USA", label: "USA" },
-  { code: "DEN", label: "Denmark" },
-];
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+    number: Number,
+    code: String,
+    forename: String,
+    surname: String,
+    current_team: String
 });
 
-app.listen(3000, (err) => {
-  console.log("Listening on port 3000");
+const Driver = mongoose.model('Driver', driverSchema);
+
+// MongoDB Connection
+mongoose.connect('mongodb://localhost:27017/f1_database', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log('MongoDB connection error:', err));
+
+// Middleware to load drivers
+app.use(async (req, res, next) => {
+    try {
+        res.locals.drivers = await Driver.find();
+        res.locals.teams = [...new Set(res.locals.drivers.map(d => d.current_team))];
+        next();
+    } catch (err) {
+        console.error('Error loading drivers:', err);
+        next(err);
+    }
+});
+
+// Routes
+app.get('/', (req, res) => {
+    res.render('index', { drivers: res.locals.drivers, teams: res.locals.teams });
+});
+
+app.post('/add', async (req, res) => {
+    const { number, code, forename, surname, current_team } = req.body;
+    try {
+        await Driver.create({ number, code, forename, surname, current_team });
+        res.redirect('/');
+    } catch (err) {
+        console.error('Error adding driver:', err);
+        res.redirect('/');
+    }
+});
+
+app.post('/edit/:id', async (req, res) => {
+    const { id } = req.params;
+    const { number, code, forename, surname, current_team } = req.body;
+    try {
+        await Driver.findByIdAndUpdate(id, { number, code, forename, surname, current_team });
+        res.redirect('/');
+    } catch (err) {
+        console.error('Error editing driver:', err);
+        res.redirect('/');
+    }
+});
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

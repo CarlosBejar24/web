@@ -1,0 +1,19 @@
+{
+  "name": "10-expressejs",
+  "version": "1.0.0",
+  "description": "This exercise will ilustrate how do we use EJS to create dynamic content using Express.",
+  "main": "serverTest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "carlosBejar",
+  "license": "ISC",
+  "dependencies": {
+    "10-expressejs": "file:",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "form-data": "^4.0.1"
+  }
+}

@@ -1,19 +1,33 @@
-.gradient-background {
-  background: linear-gradient(300deg, #feffff, #070100, #ff4c68);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
+.bg-gradient {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+}
 
-  50% {
-    background-position: 100% 50%;
-  }
+.hero img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
 
-  100% {
-    background-position: 0% 50%;
-  }
+.rounded-circle {
+  border-radius: 50%;
+}
+
+#testimonial img {
+  max-width: 120px;
+}
+
+.card {
+  border: none;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
 }
